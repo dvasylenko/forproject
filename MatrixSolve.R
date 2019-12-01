@@ -1,3 +1,6 @@
+## Set the input x as a matrix
+## then set the solved value "inv" as a null
+## changed every reference to "mean" to "solve"
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
   set <- function(y) {
@@ -13,6 +16,7 @@ makeCacheMatrix <- function(x = matrix()) {
        getinverse = getinverse)
 }
 
+## changed "mean" to "solve", "mm to "inv"
 cacheSolve <- function(x, ...) {
   inv <- x$getinverse()
   if (!is.null(inv)) {
